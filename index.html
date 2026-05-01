@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Limited Time US Offers</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; text-align: center; }
+    .container { max-width: 500px; margin: 30px auto; padding: 20px; background: rgba(0,0,0,0.75); border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.6); }
+    h1 { font-size: 26px; margin-bottom: 10px; }
+    p { font-size: 16px; margin-bottom: 15px; }
+    .cta { display: block; margin: 10px auto; padding: 15px; background: #ff3d00; color: #fff; font-size: 18px; text-decoration: none; border-radius: 8px; transition: 0.3s; width: 90%; max-width: 300px; }
+    .cta:hover { background: #ff6e40; }
+    .timer { font-size: 20px; margin: 15px 0; color: #00e676; }
+    .live { font-size: 14px; color: #ffeb3b; margin-bottom: 10px; }
+    .trust { font-size: 13px; margin-top: 15px; color: #ccc; }
+    .alert { background: #ff1744; padding: 10px; border-radius: 8px; font-size: 14px; margin-bottom: 10px; }
+    .reviews { margin-top: 15px; text-align: left; font-size: 14px; }
+    .review { background: rgba(255,255,255,0.1); padding: 10px; border-radius: 8px; margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="alert">⚠️ This offer is only available for USA users</div>
+
+    <h1>🔥 Exclusive USA Offers</h1>
+    <p>Limited-time deals, trending apps & bonus rewards.</p>
+
+    <div class="live">👀 <span id="users">128</span> people are viewing this offer right now</div>
+
+    <div class="timer">⏳ Offer expires in: <span id="countdown">05:00</span></div>
+
+    <!-- Replace with your Adsterra link -->
+    <a href="https://your-adsterra-link.com" class="cta">👉 Claim Your Offer Now</a>
+    <a href="https://your-adsterra-link.com" class="cta">🔥 Get Instant Access</a>
+    <a href="https://your-adsterra-link.com" class="cta">💰 Unlock Bonus Deals</a>
+
+    <div class="trust">
+      ✔ 100% Free Access<br>
+      ✔ Verified US Offers<br>
+      ✔ Quick & Easy Sign-Up (Takes Less Than 1 Minute)
+    </div>
+
+    <div class="reviews">
+      <div class="review">⭐️⭐️⭐️⭐️⭐️ "Got access in seconds, super easy!" – John, NY</div>
+      <div class="review">⭐️⭐️⭐️⭐️ "Works well, offers are legit." – Sarah, CA</div>
+      <div class="review">⭐️⭐️⭐️⭐️⭐️ "Best deals I found online!" – Mike, TX</div>
+    </div>
+
+  </div>
+
+<script>
+// Countdown Timer
+let time = 300;
+const countdown = document.getElementById('countdown');
+setInterval(() => {
+  let minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+  countdown.innerHTML = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+  if (time > 0) time--;
+}, 1000);
+
+// Fake Live Users Counter
+const users = document.getElementById('users');
+setInterval(() => {
+  let current = parseInt(users.innerText);
+  let change = Math.floor(Math.random() * 5) - 2;
+  users.innerText = Math.max(100, current + change);
+}, 3000);
+</script>
+
+</body>
+</html>
